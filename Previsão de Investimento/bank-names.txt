@@ -1,0 +1,61 @@
+Pedido de Citação:
+    Este conjunto de dados está publicamente disponível para pesquisa. Os detalhes estão descritos em [Moro et al., 2011].
+    Por favor, inclua esta citação caso pretenda utilizar este banco de dados:
+    [Moro et al., 2011] S. Moro, R. Laureano e P. Cortez. Utilizando Mineração de Dados para Marketing Direto Bancário: Uma Aplicação da Metodologia CRISP-DM.
+    Em P. Novais et al. (Eds.), Proceedings of the European Simulation and Modelling Conference - ESM'2011, pp. 117-121, Guimarães, Portugal, outubro de 2011. EUROSIS.
+
+Disponível em:
+    [pdf] http://hdl.handle.net/1822/14838
+    [bib] http://www3.dsi.uminho.pt/pcortez/bib/2011-esm-1.txt
+
+1. Título: Marketing Bancário
+
+2. Fontes
+    Criado por: Paulo Cortez (Universidade do Minho) e Sérgio Moro (ISCTE-IUL) em 2012
+
+3. Uso Anterior:
+    O conjunto de dados completo foi descrito e analisado em:
+    S. Moro, R. Laureano e P. Cortez. Utilizando Mineração de Dados para Marketing Direto Bancário: Uma Aplicação da Metodologia CRISP-DM.
+    Em P. Novais et al. (Eds.), Proceedings of the European Simulation and Modelling Conference - ESM'2011, pp. 117-121, Guimarães, Portugal, outubro de 2011. EUROSIS.
+
+4. Informações Relevantes:
+    Os dados estão relacionados a campanhas de marketing direto de uma instituição bancária portuguesa.
+    As campanhas de marketing foram baseadas em chamadas telefônicas. Frequentemente, mais de um contato com o mesmo cliente foi necessário para avaliar se o produto (depósito a prazo bancário) seria (ou não) subscrito.
+
+    Existem dois conjuntos de dados:
+        bank-full.csv: contém todos os exemplos, ordenados por data (de maio de 2008 a novembro de 2010).
+        bank.csv: contém 10% dos exemplos (4521), selecionados aleatoriamente a partir de bank-full.csv.
+    Este conjunto menor é fornecido para testar algoritmos de aprendizado de máquina mais computacionalmente exigentes (ex.: SVM).
+    Objetivo da Classificação: Prever se o cliente irá subscrever um depósito a prazo (variável y).
+
+5. Número de Atributos: 16 + atributo de saída.
+
+6. Informações dos Atributos:
+
+Para mais informações, leia [Moro et al., 2011].
+
+Variáveis de entrada:
+    Dados do cliente bancário:
+        * 1 - age: idade (numérico)
+        * 2 - job: tipo de trabalho (categórico: "admin.", "unknown", "unemployed", "management", "housemaid", "entrepreneur", "student",
+    "blue-collar", "self-employed", "retired", "technician", "services")
+    3 - marital: estado civil (categórico: "married", "divorced", "single"; nota: "divorced" inclui divorciado ou viúvo)
+        * 4 - education: nível de educação (categórico: "unknown", "secondary", "primary", "tertiary")
+        * 5 - default: possui crédito em atraso? (binário: "yes", "no")
+        * 6 - balance: saldo médio anual, em euros (numérico)
+        * 7 - housing: possui empréstimo habitacional? (binário: "yes", "no")
+    	* 8 - loan: possui empréstimo pessoal? (binário: "yes", "no")
+    Relacionados ao último contato da campanha atual:
+    9 - contact: tipo de comunicação do contato (categórico: "unknown", "telephone", "cellular")
+    10 - day: dia do último contato do mês (numérico)
+    11 - month: mês do último contato do ano (categórico: "jan", "feb", "mar", ..., "nov", "dec")
+    12 - duration: duração do último contato, em segundos (numérico)
+    Outros atributos:
+        * 13 - campaign: número de contatos realizados durante esta campanha para este cliente (numérico, inclui o último contato)
+        * 14 - pdays: número de dias desde que o cliente foi contatado pela última vez em uma campanha anterior (numérico, -1 significa que o cliente não foi contatado anteriormente)
+        * 15 - previous: número de contatos realizados antes desta campanha para este cliente (numérico)
+        * 16 - poutcome: resultado da campanha de marketing anterior (categórico: "unknown", "other", "failure", "success")
+    Variável de saída (alvo desejado):
+        * 17 - y: o cliente subscreve um depósito a prazo? (binário: "yes", "no")
+
+7. Valores de Atributos Ausentes: Nenhum
